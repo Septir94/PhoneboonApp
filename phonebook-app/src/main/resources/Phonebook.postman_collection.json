@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "d6f89e5b-6606-4618-83c6-6e8ab412b584",
+		"name": "Phonebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12519740"
+	},
+	"item": [
+		{
+			"name": "[POST] Create Phonebook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Saras\",\n    \"middleName\": \"008\",\n    \"lastName\": \"\",\n    \"company\": \"PT GAGA\",\n    \"contacts\": [\n        {\n            \"type\": \"PHONE\"//PHONE,EMAIL,FAX\n            ,\n            \"value\": \"089888333333443\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/api/v1/phonebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"v1",
+						"phonebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[PUT] Update Phonebook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Saras\",\n    \"middleName\": \"008\",\n    \"lastName\": \"\",\n    \"company\": \"PT GAGA\",\n    \"contacts\": [\n        {\n            \"type\": \"PHONE\"//PHONE,EMAIL,FAX\n            ,\n            \"value\": \"089881111\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/api/v1/phonebook/id/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"v1",
+						"phonebook",
+						"id",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] get phonebook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8070/api/v1/phonebook/id/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"v1",
+						"phonebook",
+						"id",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] Get all phonebook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8070/api/v1/phonebook/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"v1",
+						"phonebook",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[PATCH] Delete Phonebook",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8070/api/v1/phonebook/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"v1",
+						"phonebook",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] GET ALL Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8070/api/v1/phonebook/page?page=1&size=2&search=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"v1",
+						"phonebook",
+						"page"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "search",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
